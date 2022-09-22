@@ -4,9 +4,11 @@
  * Module dependencies.
  */
 require('dotenv').config();
-require('../models/Product');
 
-const app = require('../app');
+const path = require('path')
+require(path.resolve('models/Product'));
+
+const app = require(path.resolve('app'));
 const debug = require('debug')('spiralyze:server');
 const http = require('http');
 const mongoose = require('mongoose');
