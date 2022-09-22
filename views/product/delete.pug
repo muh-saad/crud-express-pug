@@ -1,0 +1,15 @@
+// Modal Delete Product
+form#add-row-form(action='/product/delete' method='post')
+    #DeleteModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='deleteProduct' aria-hidden='true')
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h5#deleteProduct.modal-title Delete Product
+                    button.close(type='button' data-dismiss='modal' aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body
+                    strong Are you sure to delete this product?
+                .modal-footer
+                    input.form-control.productId(type='hidden' name='productId' required='')
+                    button.btn.btn-default(type='button' data-dismiss='modal') Close
+                    button.btn.btn-success(type='submit') Delete

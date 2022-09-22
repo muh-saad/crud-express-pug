@@ -1,0 +1,20 @@
+script.
+  $(document).ready(function () {
+    //showing data to edit modal
+    $('#productTable').on('click', '.edit', function () {
+      let productId = $(this).data('productid');
+      let productName = $(this).data('productname');
+      let productPrice = $(this).data('productprice');
+      $('#EditModal').modal('show');
+      $('.productId').val(productId);
+      $('.productName').val(productName);
+      $('.productPrice').val(productPrice);
+    });
+
+    //showing delete record modal
+    $('#productTable').on('click', '.delete', function () {
+      let productId = $(this).data('productid');
+      $('#DeleteModal').modal('show');
+      $('.productId').val(productId);
+    });
+  });

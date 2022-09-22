@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+
+    if successes
+      for success in successes
+          div.alert.alert-success #{ success }
+    if errors
+      for error, i in errors
+          div.alert.alert-danger #{ error }
+
+    h2 Product List
+    button.btn.btn-success(data-toggle='modal' data-target='#myModalAdd') Add New
+
+    table#productTable.table.table-striped
+        thead
+            tr
+                th Product Name
+                th Price
+                th Actions
+        tbody
+        if products
+            each product in products
+                tr
+                    td= product.name
+                    td= product.price
+                    td
+                        a.btn.btn-sm.btn-info.edit(href='javascript:void(0);' data-productId=`${product.id}` data-productName=`${product.name}` data-productPrice=`${product.price}`) Edit
+                        ="  "
+                        a.btn.btn-sm.btn-danger.delete(href='javascript:void(0);' data-productId=`${product.id}`) Delete
+
+    include add
+    include update
+    include delete
+
+block script
+    include actions

@@ -1,0 +1,17 @@
+// Modal Add Product
+form(action='/product/save' method='post')
+    #myModalAdd.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addProduct' aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5#addProduct.modal-title Add New Product
+                    button.close(type='button' data-dismiss='modal' aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body
+                    .form-group
+                        input.form-control(type='text' name='productName' placeholder='Name' required='')
+                    .form-group
+                        input.form-control(type='text' name='productPrice' placeholder='Price' required='')
+                .modal-footer
+                    button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                    button.btn.btn-primary(type='submit') Submit
