@@ -15,4 +15,4 @@ Running the Project
 
 - Run ```npm install``` command from terminal in root folder to install dependencies.
 - To start the project, use ```nom run watch``` to start project in watch mode.
-- Use ```/products``` after the url to load the products dashboard
+- Use ```/product``` after the url to load the products dashboard
