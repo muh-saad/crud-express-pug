@@ -9,7 +9,7 @@ const path = require('path')
 require(path.resolve('models/product'));
 
 const app = require(path.resolve('app'));
-const debug = require('debug')('spiralyze:server');
+const debug = require('debug')('crud:server');
 const http = require('http');
 const mongoose = require('mongoose');
 
